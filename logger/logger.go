@@ -19,7 +19,7 @@ import (
 
 var Logger *zap.Logger
 
-func Init(cfg *settings.LogConfig) (err error) { //WriterSyncer ：指定日志将写入的位置
+func Init(cfg *settings.LogConfig, mode string) (err error) { //WriterSyncer ：指定日志将写入的位置
 	writeSyncer := getLogWriter(
 		cfg.Filename,
 		cfg.MaxSize,
@@ -32,8 +32,17 @@ func Init(cfg *settings.LogConfig) (err error) { //WriterSyncer ：指定日志�
 	if err != nil {
 		return
 	}
-
-	core := zapcore.NewCore(encoder, writeSyncer, l)
+	var core zapcore.Core
+	if mode == "dev" {
+		//开发模式,日志输出到终端
+		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
+		core = zapcore.NewTee(
+			zapcore.NewCore(encoder, writeSyncer, l),                                     //向文件里写
+			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), zapcore.DebugLevel), //向终端上写
+		)
+	} else {
+		core = zapcore.NewCore(encoder, writeSyncer, l)
+	}
 
 	//使用zap.New(…)方法来手动传递所有配置，而不是使用像zap.NewProduction()这样的预置方法来创建logger。
 	//AddCaller()添加将调用函数信息记录到日志中的功能

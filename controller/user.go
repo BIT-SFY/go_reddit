@@ -1,7 +1,8 @@
 package controller
 
 import (
-	"net/http"
+	"errors"
+	"reddit/dao/mysql"
 	"reddit/logic"
 	"reddit/models"
 
@@ -20,25 +21,49 @@ func SignUpHandler(c *gin.Context) {
 		//判断err是不是validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok { //如果不是validator.ValidationErrors类型的错误
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"msg": removeTopStruct(errs.Translate(trans)),
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
 	}
 	//2.业务处理
 	if err := logic.SignUp(p); err != nil {
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "注册失败",
-		})
+		zap.L().Error("logic.SignUp failed", zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 	//3.返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
+	ResponseSuccess(c, nil)
+}
+
+// LoginHandler 处理登录请求的函数
+func LoginHandler(c *gin.Context) {
+	//1.获取请求参数并检验参数
+	p := new(models.ParamLogin)
+	if err := c.ShouldBindJSON(p); err != nil {
+		zap.L().Error("Login with invalid param", zap.Error(err))
+		errs, ok := err.(validator.ValidationErrors)
+		if !ok {
+			ResponseError(c, CodeInvalidParam)
+			return
+		}
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
+		return
+	}
+	//2.执行业务逻辑
+	if err := logic.Login(p); err != nil {
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExit)
+			return
+		}
+		ResponseError(c, CodeInvalidPassword)
+		return
+	}
+	//3.返回结果
+	ResponseSuccess(c, nil)
 }

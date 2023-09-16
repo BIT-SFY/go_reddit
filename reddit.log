@@ -1,101 +1,88 @@
-2023-09-15T10:52:27.795+0800	DEBUG	reddit/main.go:34	logger init successed!
-2023-09-15T11:09:21.524+0800	INFO	reddit/main.go:70	Shutdown Server ...
-2023-09-15T11:09:21.524+0800	INFO	reddit/main.go:79	Server exiting
-2023-09-15T15:29:53.240+0800	DEBUG	reddit/main.go:34	logger init successed!
-2023-09-15T15:30:17.795+0800	INFO	reddit/main.go:70	Shutdown Server ...
-2023-09-15T15:30:17.795+0800	INFO	reddit/main.go:79	Server exiting
-2023-09-15T15:31:18.514+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-15T15:31:30.371+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.000178}
-2023-09-15T15:31:47.442+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-15T15:31:54.795+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-15T15:31:55.048+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-15T15:31:55.358+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-15T15:36:31.187+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-15T15:39:01.196+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-15T15:39:11.093+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.0008255}
-2023-09-15T15:39:11.166+0800	INFO	logger/logger.go:75	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-15T15:41:02.906+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.0008245}
-2023-09-15T15:41:02.931+0800	INFO	logger/logger.go:75	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-15T16:08:58.315+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-15T16:25:51.519+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T08:53:15.895+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T08:53:26.281+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.0006927}
-2023-09-16T08:53:36.495+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
-2023-09-16T10:15:45.101+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T10:16:32.364+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T10:16:55.544+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T10:35:27.896+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T10:35:46.741+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T11:08:06.871+0800	DEBUG	reddit/main.go:40	logger init successed!
-2023-09-16T11:08:54.798+0800	INFO	reddit/main.go:77	Shutdown Server ...
-2023-09-16T11:08:54.798+0800	INFO	reddit/main.go:86	Server exiting
-2023-09-16T11:09:22.887+0800	DEBUG	reddit/main.go:26	logger init successed!
-2023-09-16T11:21:34.627+0800	DEBUG	reddit/main.go:27	logger init successed!
-2023-09-16T14:58:22.128+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "invalid character '\"' after object key:value pair"}
-2023-09-16T14:58:22.145+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0173748}
-2023-09-16T14:58:44.515+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "json: cannot unmarshal number into Go struct field ParamSignUp.password of type string"}
-2023-09-16T14:58:44.515+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006372}
-2023-09-16T14:58:58.646+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
-2023-09-16T14:59:33.395+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009266}
-2023-09-16T15:03:15.650+0800	ERROR	controller/user.go:28	SignUp with invalid param
-2023-09-16T15:03:15.667+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0173663}
-2023-09-16T15:03:24.918+0800	ERROR	controller/user.go:28	SignUp with invalid param
-2023-09-16T15:03:24.919+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006654}
-2023-09-16T15:03:33.878+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0003523}
-2023-09-16T15:03:37.715+0800	ERROR	controller/user.go:18	SignUp with invalid param	{"error": "json: cannot unmarshal number into Go struct field ParamSignUp.re_password of type string"}
-2023-09-16T15:03:37.715+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0001042}
-2023-09-16T15:03:42.561+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
-2023-09-16T15:03:44.612+0800	ERROR	controller/user.go:28	SignUp with invalid param
-2023-09-16T15:03:44.613+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009714}
-2023-09-16T15:03:47.364+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
-2023-09-16T15:03:50.706+0800	ERROR	controller/user.go:28	SignUp with invalid param
-2023-09-16T15:03:50.706+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0003572}
-2023-09-16T15:03:53.983+0800	ERROR	controller/user.go:18	SignUp with invalid param	{"error": "invalid character ',' looking for beginning of value"}
-2023-09-16T15:03:53.983+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
-2023-09-16T15:17:52.300+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:17:52.317+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0174785}
-2023-09-16T15:17:53.101+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:17:53.101+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0002693}
-2023-09-16T15:17:58.592+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.Username' Error:Field validation for 'Username' failed on the 'required' tag"}
-2023-09-16T15:17:58.592+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0004166}
-2023-09-16T15:18:00.729+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.Username' Error:Field validation for 'Username' failed on the 'required' tag"}
-2023-09-16T15:18:00.729+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
-2023-09-16T15:18:05.821+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0005534}
-2023-09-16T15:18:07.294+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
-2023-09-16T15:18:10.528+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:18:10.528+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.000211}
-2023-09-16T15:18:11.200+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:18:11.200+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006148}
-2023-09-16T15:18:14.606+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0010003}
-2023-09-16T15:20:14.781+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:20:14.798+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0178929}
-2023-09-16T15:21:16.764+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:21:16.765+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006942}
-2023-09-16T15:21:17.496+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:21:17.497+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009042}
-2023-09-16T15:22:14.102+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:22:14.119+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0176541}
-2023-09-16T15:34:10.459+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
-2023-09-16T15:34:10.477+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0179256}
-2023-09-16T15:34:32.638+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag"}
-2023-09-16T15:34:32.638+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0002391}
-2023-09-16T15:35:54.024+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.password' Error:Field validation for 'password' failed on the 'required' tag"}
-2023-09-16T15:35:54.042+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0177443}
-2023-09-16T15:36:52.825+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.password' Error:Field validation for 'password' failed on the 'required' tag"}
-2023-09-16T15:36:52.842+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0173974}
-2023-09-16T15:37:57.507+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.password' Error:Field validation for 'password' failed on the 'required' tag"}
-2023-09-16T15:37:57.524+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.017196}
-2023-09-16T15:39:19.933+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
-2023-09-16T15:39:19.951+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0181552}
-2023-09-16T16:35:19.268+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
-2023-09-16T16:35:19.286+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0178456}
-2023-09-16T16:35:20.091+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
-2023-09-16T16:35:20.091+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0005358}
-2023-09-16T16:35:22.718+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0091266}
-2023-09-16T16:41:48.292+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0176105}
-2023-09-16T16:50:33.731+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0194542}
-2023-09-16T16:52:48.676+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 38.918324}
-2023-09-16T16:53:37.222+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0101165}
-2023-09-16T16:53:38.198+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.009502}
-2023-09-16T16:53:38.768+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0091919}
-2023-09-16T16:53:39.327+0800	INFO	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0099727}
+2023-09-16T17:09:10.442+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+2023-09-16T17:09:10.460+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0179634}
+2023-09-16T17:29:39.600+0800	ERROR	controller/user.go:52	Login with invalid param	{"error": "invalid character '}' looking for beginning of object key string"}
+2023-09-16T17:29:39.618+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0179513}
+2023-09-16T17:29:50.066+0800	ERROR	controller/user.go:52	Login with invalid param	{"error": "invalid character '}' looking for beginning of object key string"}
+2023-09-16T17:29:50.066+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0007754}
+2023-09-16T17:29:53.689+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0011646}
+2023-09-16T17:29:59.695+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0008576}
+2023-09-16T17:30:43.036+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0014901}
+2023-09-16T17:36:35.809+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 16.9777699}
+2023-09-16T17:59:43.506+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0007886}
+2023-09-16T17:59:44.551+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0001262}
+2023-09-16T17:59:50.661+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0030801}
+2023-09-16T17:59:51.548+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0010064}
+2023-09-16T18:00:09.544+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0004704}
+2023-09-16T18:00:17.968+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+2023-09-16T18:00:17.968+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0007336}
+2023-09-16T18:00:19.196+0800	ERROR	controller/user.go:19	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+2023-09-16T18:00:19.197+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009866}
+2023-09-16T18:00:22.398+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0001743}
+2023-09-16T20:02:32.093+0800	INFO	logger/logger.go:84	/login	{"status": 404, "method": "GET", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
+2023-09-16T20:03:24.830+0800	INFO	logger/logger.go:84	/login	{"status": 404, "method": "GET", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
+2023-09-16T20:03:37.419+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0010115}
+2023-09-16T20:03:38.430+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0010272}
+2023-09-16T20:03:49.680+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0105009}
+2023-09-16T20:03:50.425+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0000686}
+2023-09-16T20:03:56.048+0800	INFO	logger/logger.go:84	/login	{"status": 404, "method": "GET", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
+2023-09-16T20:05:02.487+0800	INFO	logger/logger.go:84	/login	{"status": 404, "method": "GET", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
+2023-09-16T20:05:05.446+0800	INFO	logger/logger.go:84	/login	{"status": 404, "method": "GET", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
+2023-09-16T20:05:15.152+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 3.0897469}
+2023-09-16T20:05:51.404+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.001652}
+2023-09-16T20:05:53.662+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.000864}
+2023-09-16T20:05:54.204+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0012215}
+2023-09-16T20:05:58.490+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009771}
+2023-09-16T20:06:01.496+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006789}
+2023-09-16T20:06:02.301+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0001127}
+2023-09-16T20:56:44.289+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0104778}
+2023-09-16T20:56:45.645+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:56:45.646+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0005786}
+2023-09-16T20:56:47.311+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:56:47.312+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0015079}
+2023-09-16T20:56:48.049+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:56:48.049+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.001514}
+2023-09-16T20:56:49.158+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:56:49.158+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006639}
+2023-09-16T20:57:39.482+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:57:39.501+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0195166}
+2023-09-16T20:57:40.351+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:57:40.351+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0005108}
+2023-09-16T20:57:40.993+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:57:40.994+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0007849}
+2023-09-16T20:58:00.458+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:58:00.458+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009595}
+2023-09-16T20:58:12.132+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+2023-09-16T20:58:12.133+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0002601}
+2023-09-16T20:58:13.103+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+2023-09-16T20:58:13.103+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0003373}
+2023-09-16T20:58:18.468+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+2023-09-16T20:58:18.468+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0}
+2023-09-16T20:59:09.530+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0091493}
+2023-09-16T20:59:10.491+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:59:10.491+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0012899}
+2023-09-16T20:59:11.277+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T20:59:11.277+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0006207}
+2023-09-16T20:59:16.065+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0099478}
+2023-09-16T21:05:46.185+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T21:05:46.202+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0185043}
+2023-09-16T21:05:47.195+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T21:05:47.195+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0010013}
+2023-09-16T21:05:51.874+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0103446}
+2023-09-16T21:05:57.881+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0133658}
+2023-09-16T21:06:02.329+0800	ERROR	controller/user.go:20	SignUp with invalid param	{"error": "Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+2023-09-16T21:06:02.330+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0008284}
+2023-09-16T21:06:06.231+0800	ERROR	controller/user.go:32	logic.SignUp failed	{"error": "用户名已存在"}
+2023-09-16T21:06:06.232+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009307}
+2023-09-16T21:06:10.627+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0000826}
+2023-09-16T21:06:11.498+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0007902}
+2023-09-16T21:06:14.160+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0010141}
+2023-09-16T21:06:16.358+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0002496}
+2023-09-16T21:06:19.243+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0002632}
+2023-09-16T21:06:21.475+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0007581}
+2023-09-16T21:08:41.632+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009336}
+2023-09-16T21:08:42.350+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0014919}
+2023-09-16T21:08:48.746+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0005643}
+2023-09-16T21:08:50.762+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0009942}
+2023-09-16T21:08:51.497+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.000277}
+2023-09-16T21:09:15.385+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.009884}
+2023-09-16T21:09:17.342+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0016194}

@@ -16,7 +16,7 @@ func main() {
 		fmt.Printf("init settings failed err:%v\n", err)
 		return
 	}
-	if err := logger.Init(settings.Conf.LogConfig); err != nil {
+	if err := logger.Init(settings.Conf.LogConfig, settings.Conf.Mode); err != nil {
 		fmt.Printf("init logger failed,err:%v\n", err)
 		return
 	}
@@ -40,7 +40,7 @@ func main() {
 		return
 	}
 	//注册路由
-	r := router.SetupRouter()
+	r := router.SetupRouter(settings.Conf.Mode)
 	r.Run()
 	// // 7.启动服务(优雅关机)
 	// srv := &http.Server{
