@@ -86,3 +86,4 @@
 2023-09-16T21:08:51.497+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.000277}
 2023-09-16T21:09:15.385+0800	INFO	logger/logger.go:84	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.009884}
 2023-09-16T21:09:17.342+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0016194}
+2023-09-16T23:27:00.287+0800	INFO	logger/logger.go:84	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.33.0", "errors": "", "cost": 0.0038012}

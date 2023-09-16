@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"reddit/controller"
 	"reddit/logger"
+	"reddit/middlewares"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
@@ -22,11 +23,14 @@ func SetupRouter(mode string) *gin.Engine {
 	//登录
 	r.POST("/login", controller.LoginHandler)
 
-	r.GET("/ping", func(c *gin.Context) {
-		// 如果是登录的用户
+	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
 		c.String(http.StatusOK, viper.GetString("version"))
-		// 否则就直接返回请登录
-		c.String(http.StatusOK, "请登录")
+	})
+
+	r.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": 404,
+		})
 	})
 	return r
 }

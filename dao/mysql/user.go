@@ -55,5 +55,7 @@ func Login(user *models.User) (err error) {
 	if _user.ID == 0 {
 		return ErrorInvalidPassword
 	}
+	//获取userID,方便之后创建JWT
+	user.UserID = _user.UserID
 	return
 }
