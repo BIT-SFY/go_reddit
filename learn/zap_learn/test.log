@@ -1,0 +1,2 @@
+2023-09-14T13:50:19.729+0800	INFO	zap_learn/main.go:89	/hello	{"status": 200, "method": "GET", "path": "/hello", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-14T13:50:22.384+0800	INFO	zap_learn/main.go:89	/hello	{"status": 200, "method": "GET", "path": "/hello", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}

@@ -1,0 +1,33 @@
+2023-09-15T10:52:27.795+0800	DEBUG	reddit/main.go:34	logger init successed!
+2023-09-15T11:09:21.524+0800	INFO	reddit/main.go:70	Shutdown Server ...
+2023-09-15T11:09:21.524+0800	INFO	reddit/main.go:79	Server exiting
+2023-09-15T15:29:53.240+0800	DEBUG	reddit/main.go:34	logger init successed!
+2023-09-15T15:30:17.795+0800	INFO	reddit/main.go:70	Shutdown Server ...
+2023-09-15T15:30:17.795+0800	INFO	reddit/main.go:79	Server exiting
+2023-09-15T15:31:18.514+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-15T15:31:30.371+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.000178}
+2023-09-15T15:31:47.442+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-15T15:31:54.795+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-15T15:31:55.048+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-15T15:31:55.358+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-15T15:36:31.187+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-15T15:39:01.196+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-15T15:39:11.093+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.0008255}
+2023-09-15T15:39:11.166+0800	INFO	logger/logger.go:75	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-15T15:41:02.906+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.0008245}
+2023-09-15T15:41:02.931+0800	INFO	logger/logger.go:75	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-15T16:08:58.315+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-15T16:25:51.519+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T08:53:15.895+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T08:53:26.281+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0.0006927}
+2023-09-16T08:53:36.495+0800	INFO	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0", "errors": "", "cost": 0}
+2023-09-16T10:15:45.101+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T10:16:32.364+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T10:16:55.544+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T10:35:27.896+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T10:35:46.741+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T11:08:06.871+0800	DEBUG	reddit/main.go:40	logger init successed!
+2023-09-16T11:08:54.798+0800	INFO	reddit/main.go:77	Shutdown Server ...
+2023-09-16T11:08:54.798+0800	INFO	reddit/main.go:86	Server exiting
+2023-09-16T11:09:22.887+0800	DEBUG	reddit/main.go:26	logger init successed!
+2023-09-16T11:21:34.627+0800	DEBUG	reddit/main.go:27	logger init successed!
