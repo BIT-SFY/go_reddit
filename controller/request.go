@@ -11,7 +11,7 @@ const CtxUserIDKey = "userID"
 var ErrorUserNotLogin = errors.New("用户未登录")
 
 // GetCurrentUser 获取当前登录用户ID
-func GetCurrentUser(c *gin.Context) (userID int64, err error) {
+func GetCurrentUserID(c *gin.Context) (userID int64, err error) {
 	uid, ok := c.Get(CtxUserIDKey)
 	if !ok {
 		err = ErrorUserNotLogin

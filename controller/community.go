@@ -10,7 +10,7 @@ import (
 
 // ---和社区相关---
 
-// CommunityHandler
+// CommunityHandler 获取所有社区
 func CommunityHandler(c *gin.Context) {
 	// 查询到所有的社区,并以列表的形式返回
 	data, err := logic.GetCommunityList()
@@ -22,7 +22,7 @@ func CommunityHandler(c *gin.Context) {
 	ResponseSuccess(c, data)
 }
 
-// CommunityDetailHandler
+// CommunityDetailHandler 获取某社区详情
 func CommunityDetailHandler(c *gin.Context) {
 	// 1.获取社区id
 	idstr := c.Param("id") // 获取URL参数

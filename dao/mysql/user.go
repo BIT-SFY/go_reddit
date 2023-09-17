@@ -52,3 +52,10 @@ func Login(user *models.User) (err error) {
 	user.UserID = _user.UserID
 	return
 }
+
+// GetUerById 根据Id获取用户信息
+func GetUerById(uid int64) (user *models.User, err error) {
+	user = new(models.User)
+	err = db.Where("user_id = ?", uid).Take(user).Error
+	return
+}

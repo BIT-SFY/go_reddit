@@ -27,9 +27,9 @@ func SetupRouter(mode string) *gin.Engine {
 	v1.Use(middlewares.JWTAuthMiddleware()) //JWT认证中间件
 	{
 		v1.GET("/community", controller.CommunityHandler)
-		v1.GET("/community/:id", controller.CommunityDetailHandler)
-
+		v1.GET("/community/:id", controller.CommunityDetailHandler) //路径参数:id
 		v1.POST("/post", controller.CreatePostHandler)
+		v1.GET("/post/:id", controller.GetPostDetailHandler)
 	}
 
 	r.NoRoute(func(c *gin.Context) {
