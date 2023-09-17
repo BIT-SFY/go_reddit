@@ -16,23 +16,23 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		// Authorization: Bearer xxxxxx.xxxx.xxx
 		// 这里的具体实现方式要依据你的实际业务情况决定
 		authHeader := c.Request.Header.Get("Authorization")
-		if authHeader == "" {
+		if authHeader == "" { //请求头中没有jwt
 			controller.ResponseError(c, controller.CodeNeedLogin)
-			c.Abort() //直接返回响应
+			c.Abort() //直接返回响应，不会进行下一步
 			return
 		}
 		// 按空格分割
 		parts := strings.SplitN(authHeader, " ", 2)
-		if !(len(parts) == 2 && parts[0] == "Bearer") {
+		if !(len(parts) == 2 && parts[0] == "Bearer") { //请求头中的格式不正确
 			controller.ResponseError(c, controller.CodeInvalidToken)
-			c.Abort() //直接返回响应
+			c.Abort()
 			return
 		}
 		// parts[1]是获取到的tokenString，我们使用之前定义好的解析JWT的函数来解析它
 		mc, err := jwt.ParseToken(parts[1])
-		if err != nil {
+		if err != nil { //解析失败
 			controller.ResponseError(c, controller.CodeInvalidToken)
-			c.Abort() //直接返回响应
+			c.Abort()
 			return
 		}
 		// 将当前请求的userID信息保存到请求的上下文c上

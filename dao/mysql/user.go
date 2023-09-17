@@ -3,19 +3,12 @@ package mysql
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"errors"
 	"reddit/models"
 )
 
 //把每一步数据库操作封装成函数 待Logic层根据业务需求调用
 
 const secret = "3220231821-shenfuyuan"
-
-var (
-	ErrorUserExist       = errors.New("用户名已存在")
-	ErrorUserNotExist    = errors.New("用户名不存在")
-	ErrorInvalidPassword = errors.New("密码错误")
-)
 
 func encryptPassword(oPassword string) string {
 	h := md5.New()
@@ -45,7 +38,7 @@ func InsertUser(user *models.User) (err error) {
 // Login 用户登录
 func Login(user *models.User) (err error) {
 	//检查用户名是否存在
-	if isExist := CheckUserExist(user.Username); isExist != true {
+	if isExist := CheckUserExist(user.Username); !isExist {
 		return ErrorUserNotExist
 	}
 	//校验密码

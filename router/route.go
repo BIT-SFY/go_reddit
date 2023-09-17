@@ -7,25 +7,30 @@ import (
 	"reddit/middlewares"
 
 	"github.com/gin-gonic/gin"
-	"github.com/spf13/viper"
 )
 
 func SetupRouter(mode string) *gin.Engine {
 	if mode == gin.ReleaseMode {
-		gin.SetMode(gin.ReleaseMode) //发布模式
+		gin.SetMode(gin.ReleaseMode) // 发布模式
 	}
 
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
-	//注册
-	r.POST("/signup", controller.SignUpHandler)
-	//登录
-	r.POST("/login", controller.LoginHandler)
+	v1 := r.Group("/api/v1")
 
-	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
-		c.String(http.StatusOK, viper.GetString("version"))
-	})
+	// 注册
+	v1.POST("/signup", controller.SignUpHandler)
+	// 登录
+	v1.POST("/login", controller.LoginHandler)
+
+	v1.Use(middlewares.JWTAuthMiddleware()) //JWT认证中间件
+	{
+		v1.GET("/community", controller.CommunityHandler)
+		v1.GET("/community/:id", controller.CommunityDetailHandler)
+
+		v1.POST("/post", controller.CreatePostHandler)
+	}
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
