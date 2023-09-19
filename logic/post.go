@@ -45,9 +45,45 @@ func GetPostById(pid int64) (data *models.ApiPostDetail, err error) {
 	}
 	// 接口数据拼接
 	data = &models.ApiPostDetail{
-		AuthorName: user.Username,
-		Post:       post,
-		Community:  community,
+		AuthorName:         user.Username,
+		ApiPost:            post,
+		ApiCommunityDetail: community,
 	}
 	return
+}
+
+// GetPostList 获取帖子列表
+func GetPostList(page, size int64) ([]*models.ApiPostDetail, error) {
+	posts, err := mysql.GetPostList(page, size)
+	if err != nil {
+		return nil, err
+	}
+	data := make([]*models.ApiPostDetail, 0, len(posts))
+	// 为所有帖子细节进行补充
+	for _, post := range posts {
+		// 根据作者id查询作者信息
+		user, err := mysql.GetUerById(post.AuthorID)
+		if err != nil {
+			zap.L().Error("mysql.GetUerById(post.AuthorID)",
+				zap.Int64("author_id", post.AuthorID),
+				zap.Error(err))
+			return nil, err
+		}
+		// 根据社区id查询社区详细信息
+		community, err := mysql.GetCommunityDetailByID(post.CommunityID)
+		if err != nil {
+			zap.L().Error("mysql.GetCommunityDetailByID(post.CommunityID)",
+				zap.Int64("community_id", post.CommunityID),
+				zap.Error(err))
+			return nil, err
+		}
+		// 接口数据拼接
+		postDetail := &models.ApiPostDetail{
+			AuthorName:         user.Username,
+			ApiPost:            post,
+			ApiCommunityDetail: community,
+		}
+		data = append(data, postDetail)
+	}
+	return data, err
 }

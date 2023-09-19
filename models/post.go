@@ -1,6 +1,10 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 type Post struct {
 	gorm.Model
@@ -12,9 +16,17 @@ type Post struct {
 	Content     string `json:"content" db:"content" binding:"required"`           //帖子内容
 }
 
+type ApiPost struct {
+	CreatedAt   time.Time
+	AuthorID    int64  `json:"author_id"`    //作者ID
+	CommunityID int64  `json:"community_id"` //所属的社区
+	Title       string `json:"title" `       //标题
+	Content     string `json:"content"`      //帖子内容
+}
+
 // ApiPostDetail 帖子详情接口的结构体
 type ApiPostDetail struct {
-	AuthorName string             `json:"author_name"` //作者姓名
-	*Post      `json:"post"`      // 嵌入帖子结构体
-	*Community `json:"community"` // 嵌入社区信息
+	AuthorName          string `json:"author_name"` //作者姓名
+	*ApiPost            `json:"post"`
+	*ApiCommunityDetail `json:"community"` // 嵌入社区信息
 }

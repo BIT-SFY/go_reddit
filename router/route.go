@@ -28,8 +28,10 @@ func SetupRouter(mode string) *gin.Engine {
 	{
 		v1.GET("/community", controller.CommunityHandler)
 		v1.GET("/community/:id", controller.CommunityDetailHandler) //路径参数:id
+
 		v1.POST("/post", controller.CreatePostHandler)
 		v1.GET("/post/:id", controller.GetPostDetailHandler)
+		v1.GET("/posts/", controller.GetPostListHandler)
 	}
 
 	r.NoRoute(func(c *gin.Context) {

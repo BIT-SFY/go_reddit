@@ -7,7 +7,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 )
 
-const TokenExpireDuration = time.Hour * 2
+const TokenExpireDuration = time.Hour * 365
 
 var mySecret = []byte("看看你的")
 
