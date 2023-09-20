@@ -4,7 +4,8 @@ import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
-	UserID   int64  `db:"user_id"`
-	Username string `db:"username"`
-	Password string `db:"password"`
+	UserID   int64
+	Username string
+	Password string
+	Token    string
 }

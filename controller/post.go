@@ -61,7 +61,11 @@ func GetPostDetailHandler(c *gin.Context) {
 // GetPostListHandler 获取帖子列表
 func GetPostListHandler(c *gin.Context) {
 	// 1.获取分页参数
-	page, size := getPageInfo(c)
+	page, size, err := getPageInfo(c)
+	if err != nil {
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
 	// 2.获取数据
 	data, err := logic.GetPostList(page, size)
 	if err != nil {

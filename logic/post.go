@@ -2,6 +2,7 @@ package logic
 
 import (
 	"reddit/dao/mysql"
+	"reddit/dao/redis"
 	"reddit/models"
 	"reddit/pkg/snowflake"
 
@@ -13,7 +14,15 @@ func CreatePost(p *models.Post) (err error) {
 	//1. 生成post id
 	p.PostID = snowflake.GenID()
 	//2. 保存到数据库,并返回错误
-	return mysql.CreatePost(p)
+	err = mysql.CreatePost(p)
+	if err != nil {
+		return err
+	}
+	err = redis.CreatePost(p.PostID)
+	if err != nil {
+		return err
+	}
+	return
 }
 
 // GetPostById 通过帖子id找到帖子具体内容
