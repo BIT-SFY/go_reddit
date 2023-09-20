@@ -18,6 +18,7 @@ type Post struct {
 
 type ApiPost struct {
 	CreatedAt   time.Time
+	PostID      int64  `json:"post_id"`      //帖子ID
 	AuthorID    int64  `json:"author_id"`    //作者ID
 	CommunityID int64  `json:"community_id"` //所属的社区
 	Title       string `json:"title" `       //标题
@@ -27,6 +28,7 @@ type ApiPost struct {
 // ApiPostDetail 帖子详情接口的结构体
 type ApiPostDetail struct {
 	AuthorName          string `json:"author_name"` //作者姓名
+	VoteNum             int64  `json:"vote_num"`
 	*ApiPost            `json:"post"`
 	*ApiCommunityDetail `json:"community"` // 嵌入社区信息
 }
