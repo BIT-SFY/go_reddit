@@ -31,11 +31,13 @@ func SetupRouter(mode string) *gin.Engine {
 
 		v1.POST("/post", controller.CreatePostHandler)
 		v1.GET("/post/:id", controller.GetPostDetailHandler)
+		//直接获取所有列表
 		v1.GET("/posts", controller.GetPostListHandler)
 		//根据时间分数获取帖子列表
 		v1.GET("/posts2", controller.GetPostListHandler2)
 
 		v1.POST("/vote", controller.PostVoteController)
+
 	}
 
 	r.NoRoute(func(c *gin.Context) {

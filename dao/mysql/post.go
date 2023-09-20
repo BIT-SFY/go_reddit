@@ -32,7 +32,7 @@ func GetPostList(page, size int64) (posts []*models.ApiPost, err error) {
 	return
 }
 
-// 根据给定的id列表查询帖子数据
+// GetPostListByIds 根据给定的id列表查询帖子数据
 func GetPostListByIds(ids []string) (posts []*models.ApiPost, err error) {
 	posts = make([]*models.ApiPost, 0)
 	if err = db.
@@ -41,6 +41,21 @@ func GetPostListByIds(ids []string) (posts []*models.ApiPost, err error) {
 		Order("created_at DESC").
 		Find(&posts).
 		Error; err != nil {
+		return nil, err
+	}
+	return
+}
+
+// GetCommunityPostList 获取对应社区的帖子
+func GetCommunityPostList(p *models.ParamPostList) (posts []*models.ApiPost, err error) {
+	posts = make([]*models.ApiPost, 0)
+	err = db.
+		Model(&models.Post{}).
+		Where("community_id = ?", p.CommunityID).
+		Order("created_at DESC").
+		Find(&posts).
+		Error
+	if err != nil {
 		return nil, err
 	}
 	return

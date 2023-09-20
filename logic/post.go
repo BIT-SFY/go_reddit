@@ -18,7 +18,7 @@ func CreatePost(p *models.Post) (err error) {
 	if err != nil {
 		return err
 	}
-	err = redis.CreatePost(p.PostID)
+	err = redis.CreatePost(p.PostID, p.CommunityID)
 	if err != nil {
 		return err
 	}
@@ -145,6 +145,55 @@ func GetPostList2(p *models.ParamPostList) (data []*models.ApiPostDetail, err er
 			ApiCommunityDetail: community,
 		}
 		data = append(data, postDetail)
+	}
+	return
+}
+
+// GetCommunityPostList 按社区获取帖子列表
+func GetCommunityPostList(p *models.ParamPostList) (datas []*models.ApiPostDetail, err error) {
+	// 2.按社区去redis查询id列表
+	ids, err := redis.GetCommunityPostIDsInOrder(p)
+	if err != nil {
+		return
+	}
+	if len(ids) == 0 {
+		zap.L().Warn("redis.GetPostIDsInOrder(p) return 0 data")
+		return
+	}
+	//根据社区id去查有哪些帖子
+	posts, err := mysql.GetCommunityPostList(p)
+	datas = make([]*models.ApiPostDetail, 0)
+	for _, post := range posts {
+		user, err := mysql.GetUerById(post.AuthorID)
+		if err != nil {
+			return nil, err
+		}
+		community, err := mysql.GetCommunityDetailByID(post.CommunityID)
+		if err != nil {
+			return nil, err
+		}
+		data := &models.ApiPostDetail{
+			AuthorName:         user.Username,
+			ApiPost:            post,
+			ApiCommunityDetail: community,
+		}
+		datas = append(datas, data)
+	}
+	return
+}
+
+// GetPostListNew 将两个查询帖子列表的接口合二为一的函数
+func GetPostListNew(p *models.ParamPostList) (data []*models.ApiPostDetail, err error) {
+	//根据请求参数的不同实行不同的逻辑
+	if p.CommunityID == 0 {
+		// 查所有
+		data, err = GetPostList2(p)
+	} else {
+		// 根据社区id查询
+		data, err = GetCommunityPostList(p)
+	}
+	if err != nil {
+		zap.L().Error("GetPostListNew failed", zap.Error(err))
 	}
 	return
 }

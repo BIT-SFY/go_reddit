@@ -1,9 +1,3 @@
-/*
- * @Author: BIT-SFY
- * @Date: 2023-09-12 21:18:37
- * @LastEditTime: 2023-09-14 09:31:10
- * @Description: 对go-redis一些基本操作的学习
- */
 package main
 
 import (

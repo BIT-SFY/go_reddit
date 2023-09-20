@@ -7,7 +7,6 @@
 package redis
 
 import (
-	"context"
 	"fmt"
 	"reddit/settings"
 
@@ -27,7 +26,6 @@ func Init(cfg *settings.RedisConfig) (err error) {
 		DB:       cfg.DB,
 		PoolSize: cfg.PoolSize,
 	})
-	ctx := context.Background()
 	_, err = rdb.Ping(ctx).Result()
 	return err
 }
