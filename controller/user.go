@@ -11,7 +11,14 @@ import (
 	"go.uber.org/zap"
 )
 
-// SignUpHandler 处理注册请求的函数
+// @Summary 注册
+// @Description 处理用户注册请求
+// @Tags 用户模块
+// @Accept json
+// @Produce json
+// @Param content body string true "json"
+// @Success 200
+// @Router /api/v1/signup [post]
 func SignUpHandler(c *gin.Context) {
 	//1.获取参数和参数校验
 	p := new(models.ParamSignUp)
@@ -41,7 +48,14 @@ func SignUpHandler(c *gin.Context) {
 	ResponseSuccess(c, nil)
 }
 
-// LoginHandler 处理登录请求的函数
+// @Summary 登录
+// @Description 处理用户登录请求
+// @Tags 用户模块
+// @Accept json
+// @Produce json
+// @Param content body string true "json"
+// @Success 200
+// @Router /api/v1/login [post]
 func LoginHandler(c *gin.Context) {
 	//1.获取请求参数并检验参数
 	p := new(models.ParamLogin)

@@ -15,7 +15,6 @@ func CreatePostHandler(c *gin.Context) {
 	// c.ShouldBindJSON() // validator --> binding tag
 	p := new(models.Post)
 	if err := c.ShouldBindJSON(p); err != nil {
-		zap.L().Debug("c.ShouldBindJSON failed", zap.Any("err", err))
 		zap.L().Error("c.ShouldBindJSON failed")
 		ResponseError(c, CodeInvalidParam)
 		return
@@ -58,33 +57,17 @@ func GetPostDetailHandler(c *gin.Context) {
 	ResponseSuccess(c, data)
 }
 
-// GetPostListHandler 获取帖子列表
+// @Summary 升级版帖子列表接口
+// @Description 可按社区按时间或分数排序查询帖子列表接口
+// @Tags 帖子相关接口
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer JWT"
+// @Param object query models.ParamPostList false "查询参数"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /api/v1/posts [get]
 func GetPostListHandler(c *gin.Context) {
-	// 1.获取分页参数
-	page, size, err := getPageInfo(c)
-	if err != nil {
-		ResponseError(c, CodeInvalidParam)
-		return
-	}
-	// 2.获取数据
-	data, err := logic.GetPostList(page, size)
-	if err != nil {
-		zap.L().Error(" logic.GetPostList() failed", zap.Error(err))
-		ResponseError(c, CodeServerBusy)
-		return
-	}
-
-	// 3.返回响应
-	ResponseSuccess(c, data)
-}
-
-// GetPostListHandler2 升级版
-// 根绝前端传来的参数动态获取帖子列表
-// 按创建时间排序,按分数排序
-// 1.获取参数
-// 2.去redis查询id列表
-// 3.根据id去数据库查询帖子详情
-func GetPostListHandler2(c *gin.Context) {
 	// GET请求参数:/api/v1/posts2?page=1&size=10&order=time  ?后面的叫Query string参数,所以获取的时候都是c.Query这种方式
 	// 1.初始化结构体时指定初始参数
 	p := &models.ParamPostList{

@@ -10,7 +10,14 @@ import (
 
 // ---和社区相关---
 
-// CommunityHandler 获取所有社区
+// @Summary 获取社区信息
+// @Description 获取社区信息
+// @Tags 社区模块
+// @Accept json
+// @Produce json
+// @Param Authorization header string false "Bearer JWT"
+// @Success 200
+// @Router /api/v1/community [get]
 func CommunityHandler(c *gin.Context) {
 	// 查询到所有的社区,并以列表的形式返回
 	data, err := logic.GetCommunityList()
@@ -22,7 +29,15 @@ func CommunityHandler(c *gin.Context) {
 	ResponseSuccess(c, data)
 }
 
-// CommunityDetailHandler 获取某社区详情
+// @Summary 获取社区详情信息
+// @Description 根据社区id获取社区详情信息
+// @Tags 社区模块
+// @Accept json
+// @Produce json
+// @Param Authorization header string false "Bearer JWT"
+// @Param id path int true "社区id"
+// @Success 200
+// @Router /api/v1/community{id} [get]
 func CommunityDetailHandler(c *gin.Context) {
 	// 1.获取社区id
 	idstr := c.Param("id") // 获取URL参数

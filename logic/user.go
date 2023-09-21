@@ -36,11 +36,10 @@ func Login(p *models.ParamLogin) (user *models.User, err error) {
 	if err := mysql.Login(user); err != nil {
 		return nil, err
 	}
-	//生成JWT的token
+	// 生成JWT的token
 	user.Token, err = jwt.GenToken(user.UserID, user.Username)
 	if err != nil {
 		return nil, err
 	}
 	return
-
 }
