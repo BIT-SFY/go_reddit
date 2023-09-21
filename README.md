@@ -14,4 +14,6 @@ https://space.bilibili.com/4638193
 ### AIR热重载，需要去air的根目录生成可执行文件，再去环境变量中配置
 go get -u github.com/cosmtrek/air
 ![配置环境变量](learn/_materials/air.png)
-
+### JWT结构以及运行逻辑
+![JWT逻辑结构)](learn/_materials/JWT.png)
+![JWT结构(go语言环境)](learn/_materials/JWT%20Structure.png)

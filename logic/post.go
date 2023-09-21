@@ -161,7 +161,7 @@ func GetCommunityPostList(p *models.ParamPostList) (datas []*models.ApiPostDetai
 		return
 	}
 	//根据社区id去查有哪些帖子
-	posts, err := mysql.GetCommunityPostList(p)
+	posts, err := mysql.GetCommunityPostList(ids, p.CommunityID)
 	datas = make([]*models.ApiPostDetail, 0)
 	for _, post := range posts {
 		user, err := mysql.GetUerById(post.AuthorID)

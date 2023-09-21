@@ -2,6 +2,8 @@ package mysql
 
 import (
 	"reddit/models"
+
+	"gorm.io/gorm/clause"
 )
 
 // CreatePost 创建帖子
@@ -38,7 +40,12 @@ func GetPostListByIds(ids []string) (posts []*models.ApiPost, err error) {
 	if err = db.
 		Model(&models.Post{}).
 		Where("post_id in ?", ids).
-		Order("created_at DESC").
+		Clauses(clause.OrderBy{
+			Expression: clause.Expr{
+				SQL:                "FIELD(post_id,?)",
+				Vars:               []interface{}{ids},
+				WithoutParentheses: true,
+			}}).
 		Find(&posts).
 		Error; err != nil {
 		return nil, err
@@ -47,15 +54,19 @@ func GetPostListByIds(ids []string) (posts []*models.ApiPost, err error) {
 }
 
 // GetCommunityPostList 获取对应社区的帖子
-func GetCommunityPostList(p *models.ParamPostList) (posts []*models.ApiPost, err error) {
+func GetCommunityPostList(ids []string, cid int64) (posts []*models.ApiPost, err error) {
 	posts = make([]*models.ApiPost, 0)
-	err = db.
+	if err = db.
 		Model(&models.Post{}).
-		Where("community_id = ?", p.CommunityID).
-		Order("created_at DESC").
+		Where("community_id = ?", cid).
+		Clauses(clause.OrderBy{
+			Expression: clause.Expr{
+				SQL:                "FIELD(post_id,?)",
+				Vars:               []interface{}{ids},
+				WithoutParentheses: true,
+			}}).
 		Find(&posts).
-		Error
-	if err != nil {
+		Error; err != nil {
 		return nil, err
 	}
 	return
