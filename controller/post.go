@@ -65,7 +65,7 @@ func GetPostDetailHandler(c *gin.Context) {
 // @Param Authorization header string false "Bearer JWT"
 // @Param object query models.ParamPostList false "查询参数"
 // @Security ApiKeyAuth
-// @Success 200 {object} _ResponsePostList
+// @Success 1000 {object} _ResponsePostList
 // @Router /api/v1/posts [get]
 func GetPostListHandler(c *gin.Context) {
 	// GET请求参数:/api/v1/posts2?page=1&size=10&order=time  ?后面的叫Query string参数,所以获取的时候都是c.Query这种方式

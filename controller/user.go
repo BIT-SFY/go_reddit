@@ -17,7 +17,7 @@ import (
 // @Accept json
 // @Produce json
 // @Param content body string true "json"
-// @Success 200
+// @Success 1000 {object} _ResponseMessage
 // @Router /api/v1/signup [post]
 func SignUpHandler(c *gin.Context) {
 	//1.获取参数和参数校验
@@ -54,7 +54,7 @@ func SignUpHandler(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Param content body string true "json"
-// @Success 200
+// @Success 1000 {object} _ResponseMessage
 // @Router /api/v1/login [post]
 func LoginHandler(c *gin.Context) {
 	//1.获取请求参数并检验参数

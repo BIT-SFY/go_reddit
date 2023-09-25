@@ -56,7 +56,7 @@ func Init() (err error) {
 		fmt.Printf("viper.ReadInConfign failed...%v\n", err)
 		return
 	}
-	// 把读取到的配置信息反序列化到Conf变量中
+	// 把读取到的配置信息反序列化到Conf变量中，该变量为全局变量，可被各个文件访问到
 	if err = viper.Unmarshal(Conf); err != nil {
 		fmt.Printf("viper.Unmarshal failed...%v\n", err)
 		return

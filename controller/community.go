@@ -16,7 +16,7 @@ import (
 // @Accept json
 // @Produce json
 // @Param Authorization header string false "Bearer JWT"
-// @Success 200
+// @Success 1000
 // @Router /api/v1/community [get]
 func CommunityHandler(c *gin.Context) {
 	// 查询到所有的社区,并以列表的形式返回
@@ -36,7 +36,7 @@ func CommunityHandler(c *gin.Context) {
 // @Produce json
 // @Param Authorization header string false "Bearer JWT"
 // @Param id path int true "社区id"
-// @Success 200
+// @Success 1000
 // @Router /api/v1/community{id} [get]
 func CommunityDetailHandler(c *gin.Context) {
 	// 1.获取社区id

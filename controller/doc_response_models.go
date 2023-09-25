@@ -9,3 +9,8 @@ type _ResponsePostList struct {
 	Message string                  `json:"message"`
 	Data    []*models.ApiPostDetail `json:"data"`
 }
+
+type _ResponseMessage struct {
+	Code    ResCode `json:"code"`
+	Message string  `json:"message"`
+}

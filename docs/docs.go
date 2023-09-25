@@ -41,8 +41,8 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "OK"
+                    "1000": {
+                        "description": ""
                     }
                 }
             }
@@ -76,8 +76,8 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "OK"
+                    "1000": {
+                        "description": ""
                     }
                 }
             }
@@ -107,8 +107,8 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "OK"
+                    "1000": {
+                        "description": ""
                     }
                 }
             }
@@ -122,6 +122,9 @@ const docTemplate = `{
                 ],
                 "description": "可按社区按时间或分数排序查询帖子列表接口",
                 "consumes": [
+                    "application/json"
+                ],
+                "produces": [
                     "application/json"
                 ],
                 "tags": [
@@ -157,7 +160,14 @@ const docTemplate = `{
                         "in": "query"
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "1000": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/controller._ResponsePostList"
+                        }
+                    }
+                }
             }
         },
         "/api/v1/signup": {
@@ -185,9 +195,107 @@ const docTemplate = `{
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "OK"
+                    "1000": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/controller._ResponseMessage"
+                        }
                     }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller._ResponseMessage": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller._ResponsePostList": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.ApiPostDetail"
+                    }
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.ApiCommunityDetail": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "introduction": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.ApiPost": {
+            "type": "object",
+            "properties": {
+                "author_id": {
+                    "description": "作者ID",
+                    "type": "integer"
+                },
+                "community_id": {
+                    "description": "所属的社区",
+                    "type": "integer"
+                },
+                "content": {
+                    "description": "帖子内容",
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "post_id": {
+                    "description": "帖子ID",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "标题",
+                    "type": "string"
+                }
+            }
+        },
+        "models.ApiPostDetail": {
+            "type": "object",
+            "properties": {
+                "author_name": {
+                    "description": "作者姓名",
+                    "type": "string"
+                },
+                "community": {
+                    "description": "嵌入社区信息",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/models.ApiCommunityDetail"
+                        }
+                    ]
+                },
+                "post": {
+                    "$ref": "#/definitions/models.ApiPost"
+                },
+                "vote_num": {
+                    "type": "integer"
                 }
             }
         }

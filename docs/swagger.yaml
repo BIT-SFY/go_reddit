@@ -1,4 +1,66 @@
 basePath: /
+definitions:
+  controller._ResponseMessage:
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+    type: object
+  controller._ResponsePostList:
+    properties:
+      code:
+        type: integer
+      data:
+        items:
+          $ref: '#/definitions/models.ApiPostDetail'
+        type: array
+      message:
+        type: string
+    type: object
+  models.ApiCommunityDetail:
+    properties:
+      createdAt:
+        type: string
+      introduction:
+        type: string
+      name:
+        type: string
+    type: object
+  models.ApiPost:
+    properties:
+      author_id:
+        description: 作者ID
+        type: integer
+      community_id:
+        description: 所属的社区
+        type: integer
+      content:
+        description: 帖子内容
+        type: string
+      createdAt:
+        type: string
+      post_id:
+        description: 帖子ID
+        type: integer
+      title:
+        description: 标题
+        type: string
+    type: object
+  models.ApiPostDetail:
+    properties:
+      author_name:
+        description: 作者姓名
+        type: string
+      community:
+        allOf:
+        - $ref: '#/definitions/models.ApiCommunityDetail'
+        description: 嵌入社区信息
+      post:
+        $ref: '#/definitions/models.ApiPost'
+      vote_num:
+        type: integer
+    type: object
 host: 127.0.0.1:8080
 info:
   contact:
@@ -22,8 +84,8 @@ paths:
       produces:
       - application/json
       responses:
-        "200":
-          description: OK
+        "1000":
+          description: ""
       summary: 获取社区信息
       tags:
       - 社区模块
@@ -45,8 +107,8 @@ paths:
       produces:
       - application/json
       responses:
-        "200":
-          description: OK
+        "1000":
+          description: ""
       summary: 获取社区详情信息
       tags:
       - 社区模块
@@ -65,8 +127,8 @@ paths:
       produces:
       - application/json
       responses:
-        "200":
-          description: OK
+        "1000":
+          description: ""
       summary: 登录
       tags:
       - 用户模块
@@ -93,7 +155,13 @@ paths:
       - in: query
         name: size
         type: integer
-      responses: {}
+      produces:
+      - application/json
+      responses:
+        "1000":
+          description: ""
+          schema:
+            $ref: '#/definitions/controller._ResponsePostList'
       security:
       - ApiKeyAuth: []
       summary: 升级版帖子列表接口
@@ -114,8 +182,10 @@ paths:
       produces:
       - application/json
       responses:
-        "200":
-          description: OK
+        "1000":
+          description: ""
+          schema:
+            $ref: '#/definitions/controller._ResponseMessage'
       summary: 注册
       tags:
       - 用户模块
