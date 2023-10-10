@@ -1,10 +1,13 @@
-package main
+package kafka
 
 import (
 	"log"
 
 	"github.com/IBM/sarama"
 )
+
+var HOST = "127.0.0.1:9092"
+var TOPIC = "learn_kafka"
 
 func Cstart() {
 	//单分区消费
