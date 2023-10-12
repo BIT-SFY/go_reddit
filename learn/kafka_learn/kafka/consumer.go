@@ -62,3 +62,22 @@ func handlerReaderMsg(message *sarama.ConsumerMessage) *msgStruct {
 	}
 	return msg
 }
+
+// 指定分区消费数据
+func MyConsumerPartition(PartitionId int32) {
+	config := sarama.NewConfig()
+	consumer, err := sarama.NewConsumer([]string{HOST}, config)
+	if err != nil {
+		log.Fatal("NewConsumer err:", err)
+	}
+	defer consumer.Close()
+	pc, err := consumer.ConsumePartition(TOPIC, PartitionId, sarama.OffsetOldest)
+	if err != nil {
+		log.Printf("try create partition_consumer error %s\n", err.Error())
+		return
+	}
+	for message := range pc.Messages() {
+		msg := handlerReaderMsg(message)
+		log.Printf("[Consumer] partitionid: %d; offset:%d, value: %v\n", message.Partition, message.Offset, *msg)
+	}
+}
