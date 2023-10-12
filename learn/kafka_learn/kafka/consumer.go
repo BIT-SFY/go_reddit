@@ -1,20 +1,18 @@
 package kafka
 
 import (
+	"encoding/base64"
+	"encoding/json"
 	"log"
+	"sync"
 
 	"github.com/IBM/sarama"
 )
 
-var HOST = "127.0.0.1:9092"
-var TOPIC = "learn_kafka"
+var wg sync.WaitGroup
 
-func Cstart() {
-	//单分区消费
-	SinglePartition()
-}
-
-func SinglePartition() {
+// 消费
+func Consumer() {
 	config := sarama.NewConfig()
 	consumer, err := sarama.NewConsumer([]string{HOST}, config)
 	if err != nil {
@@ -22,16 +20,45 @@ func SinglePartition() {
 	}
 	defer consumer.Close()
 	// 参数1 指定消费那个topic
-	// 参数2 分区，这里默信0号分区
-	// 参数3 offset 从哪儿开始消费起走，正常情况下每次消费完都会将这次的offset提交到kafka
+	// 参数2 分区，这里默认信0号分区
+	// 参数3 offset 从哪儿开始消费起走
 	// 如果改为 sarama.OffsetOldest 则会从最旧的消息开始消费，即每次重启 consumer 都会把该 topic 下的所有消息消费一次
-	partitionConsumer, err := consumer.ConsumePartition(TOPIC, 0, sarama.OffsetOldest)
+	partitions, err := consumer.Partitions(TOPIC)
 	if err != nil {
-		log.Fatal("ConsumerParition err:", err)
+		log.Printf("return topic partitions error %s\n", err.Error())
+		return
 	}
-	defer partitionConsumer.Close()
-	// 会一直阻塞在这里
-	for message := range partitionConsumer.Messages() {
-		log.Printf("[Consumer] partitionid: %d; offset:%d, value: %s\n", message.Partition, message.Offset, string(message.Value))
+	for _, partitionId := range partitions {
+		PartitionConsumer, err := consumer.ConsumePartition(TOPIC, partitionId, sarama.OffsetOldest)
+		if err != nil {
+			log.Printf("try create partition_consumer error %s\n", err.Error())
+			return
+		}
+		wg.Add(1)
+
+		go func(pc sarama.PartitionConsumer) {
+			defer wg.Done()
+			for message := range pc.Messages() {
+				msg := handlerReaderMsg(message)
+				log.Printf("[Consumer] partitionid: %d; offset:%d, value: %v\n", message.Partition, message.Offset, *msg)
+			}
+		}(PartitionConsumer)
 	}
+	wg.Wait()
+}
+
+// 处理kafka传来的base64数据
+func handlerReaderMsg(message *sarama.ConsumerMessage) *msgStruct {
+	msgInfo, err := base64.StdEncoding.DecodeString(string(message.Value))
+	if err != nil {
+		log.Print(err)
+	}
+
+	// 将解码后的数据反序列化为 msgStruct 结构体
+	msg := &msgStruct{}
+	err = json.Unmarshal(msgInfo, &msg)
+	if err != nil {
+		log.Print(err)
+	}
+	return msg
 }
